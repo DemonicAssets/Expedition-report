@@ -1,11 +1,67 @@
 :root {
-  --surface: #061016;
-  --line: #0b1f29;
-  --ink: #edf8fb;
+  --surface: #009dff;
+  --line: #04abff;
+  --ink: #1dabd3;
   --signal: #59ddff;
+  --background: #009dff;
+  --panel: #0b2230;
+  --text: #eafaff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .report-shell {
   width: min(72rem, calc(100% - 2rem));
   margin: 0 auto;
+}
+
+.scene {
+  padding: 2rem;
+  background: var(--panel);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(4, 171, 255, 0.18);
+}
+
+.scene-number {
+  margin-top: 0;
+  color: var(--signal);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  color: var(--surface);
+}
+
+p {
+  color: var(--text);
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.5rem;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
 }
